@@ -6,7 +6,10 @@ spec:
   params:
   - name: git-repo-url
     value: $(body.repository.url)
+    # value: https://github.com/openshift-pipelines/vote-ui.git
   - name: git-repo-name
     value: $(body.repository.name)
+    # value: vote-ui
   - name: git-revision
     value: $(body.head_commit.id)
+    # value: master

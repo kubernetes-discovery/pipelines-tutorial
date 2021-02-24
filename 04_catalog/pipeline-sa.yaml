@@ -1,0 +1,9 @@
+apiVersion: v1
+imagePullSecrets:
+- name: pipeline-dockercfg-k2vvd
+kind: ServiceAccount
+metadata:
+  name: pipeline
+secrets:
+- name: pipeline-token-vssdd
+- name: pipeline-dockercfg-k2vvd

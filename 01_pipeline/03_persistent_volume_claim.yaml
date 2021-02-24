@@ -3,6 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: source-pvc
 spec:
+  storageClassName: slow
   accessModes:
     - ReadWriteOnce
   resources:

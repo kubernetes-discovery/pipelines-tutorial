@@ -1,0 +1,94 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: slow
+parameters:
+  type: pd-standard
+provisioner: kubernetes.io/gce-pd
+reclaimPolicy: Delete
+volumeBindingMode: Immediate
+
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv1
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 10Gi
+  nfs:
+    path: /data/nfs1/pv1
+    server: 10.17.33.19
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: slow
+  volumeMode: Filesystem
+
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv2
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 10Gi
+  nfs:
+    path: /data/nfs1/pv2
+    server: 10.17.33.19
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: slow
+  volumeMode: Filesystem
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv3
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 10Gi
+  nfs:
+    path: /data/nfs1/pv3
+    server: 10.17.33.19
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: slow
+  volumeMode: Filesystem
+
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv4
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 10Gi
+  nfs:
+    path: /data/nfs1/pv4
+    server: 10.17.33.19
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: slow
+  volumeMode: Filesystem
+
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv5
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 10Gi
+  nfs:
+    path: /data/nfs1/pv5
+    server: 10.17.33.19
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: slow
+  volumeMode: Filesystem
