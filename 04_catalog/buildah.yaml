@@ -14,7 +14,7 @@ spec:
     Buildah Task builds source into a container image using Project Atomic's
     Buildah build tool.It uses Buildah's support for building from Dockerfiles,
     using its buildah bud command.This command executes the directives in the
-    Dockerfile to assemble a container image, then pushes that image to a
+    Dockerfile to assemble a container image, then pushes the image to a
     container registry.
   params:
   - name: IMAGE
