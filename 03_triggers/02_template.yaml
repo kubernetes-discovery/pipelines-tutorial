@@ -16,7 +16,7 @@ spec:
   - apiVersion: tekton.dev/v1beta1
     kind: PipelineRun
     metadata:
-      name: build-deploy-$(tt.params.git-repo-name)-$(uid)
+      name: a-$(tt.params.git-repo-name)-$(uid)
     spec:
       serviceAccountName: pipeline
       pipelineRef:
@@ -34,7 +34,6 @@ spec:
       - name: shared-workspace
         volumeClaimTemplate:
           spec:
-            storageClassName: slow
             accessModes:
               - ReadWriteOnce
             resources:
